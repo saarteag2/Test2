@@ -37,7 +37,7 @@ These scripts enable the annotation and subsequent filtering of transmission sum
     3b. combine_and_clean.sh #source code at the end of filter_annotated_transmission_summary_qsub.sh to give you a single filtered output file.
 
 ## 3. Overview of analysis based filtering scripts:
-Filtering can be conducted for the two types of transmission summary files: flat (filter_flat_annotated_transmission_summary.py) and family aggregation (filter_family_aggregation_annotated_transmission_summary.py). Both script have a set of required arguments and noteworthy arguments:
+Filtering can be conducted for the two types of transmission summary files: flat (filter_flat_annotated_transmission_summary.py) and family aggregation (filter_family_aggregation_annotated_transmission_summary.py). Both scripts have a set of required arguments and noteworthy arguments (see below).
 
 #### Required Arguments:
   1. **--input_db**: absolute path to input file (annotated flat file)
@@ -51,12 +51,15 @@ Requirment dependent on use of --output_prefix parameter (see Noteworthy Argumen
   2. **--no_qsub**: specify whether qsub can be used to filter multi-chr transmission summary input format type: False (Default), True
 
 Both scripts accept transmission summary files in three formats that have been categorized into two categories: per_chr and multi_chr (see below for details). 
+
 ![Transmission Summary Input formats and input_type](https://i.imgur.com/Xndwp9u.png)
 
-Input in multi_chr format are preprocessed by the script and divided into per chromosome shards in a directory called "filtered_flat_per_chr_shards" in the user specified output directory (see below). By default, filtering of these per chromosome shards are submitted as qsub jobs. One can opt out of using qsub, by providing --no_qsub True as an argument.
+Input in multi_chr format are preprocessed by the script and divided into per chromosome shards in a directory called "filtered_flat_per_chr_shards" within the user specified output directory (see below). By default, filtering of these per chromosome shards are submitted as qsub jobs. One can opt out of using qsub, by providing --no_qsub True as an argument.
+
 ![Preprocessing Step](https://i.imgur.com/k7YDWhy.png)
 
-Both scripts also allow the user to specify in which format they would like their filtering output in by using the --comb_and_clean argument to select: merge_all_chr (Default), merge_by_chr, or no_comb_clean (see details below). If the --comb_and_clean is specified as anything but no_comb_clean, then the --output_perfix argument must be set as well (see Required Arguments above).
+Both scripts also allow the user to specify in which format they would like their filtering output in by using the --comb_and_clean argument to select: merge_all_chr (Default), merge_by_chr, or no_comb_clean (see details below). If the --comb_and_clean is specified as anything but no_comb_clean, then the --output_prefix argument must be set as well (see Required Arguments above).
+
 ![Combine and Clean Options](https://i.imgur.com/BrzX9lP.png)
 
 ## 4. Additional support scripts:
