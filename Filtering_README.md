@@ -5,7 +5,7 @@ These scripts enable the annotation and subsequent filtering of transmission sum
 ## Guideline
 1. Main functions of these scripts
 2. Main scripts
-3. Overview of filtering script
+3. Overview of analysis based filtering script
 4. Additional support scripts
 5. Instructions for adding a new project
 6. Hints for adding a new column
