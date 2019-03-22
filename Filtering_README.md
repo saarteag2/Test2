@@ -89,4 +89,4 @@ Both scripts also allow the user to specify in which format they would like thei
 2. Adding a new column into the annotated transmission summary file is relatively straightforward. Though you have to remember to add the code for adding a new column to both annotate_flat_transmission_summary.py and  annotate_family_aggregation_transmission_summary.py if desired.
 3. Column names must be added to annotate_transmission_summary/fats.py in the static lists TransmissionSummaryLine.COLUMNS and FamilyAggregationTransmissionSummaryLine.FAMILY_AGGREGATION_COLUMNS if applicable (as well as TransmissionSummaryLine.NUMERIC_COLUMNS and FamilyAggregationTransmissionSummaryLine.NUMERIC_COLUMNS if the column should be treated as a numeric value). Otherwise you will have an error the first time you try to filter.
 
-##### Documentation drafted by E.Ruzzo 2018-06-14, edited by S.Arteaga 2019-03-12.
+##### Documentation drafted by E.Ruzzo 2018-06-14, edited by S.Arteaga 2019-03-22.
