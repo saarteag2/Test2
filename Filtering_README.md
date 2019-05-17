@@ -42,9 +42,9 @@ Filtering can be conducted for the two types of transmission summary files: flat
 #### Required Arguments:
   1. **--input_db**: absolute path to input file (annotated flat file)
   2. **--output_dir**: absolute path to desired output directory
-  3. **--input_type**: specify transmission summary input format as either: per_chr, multi_chr, or chr_shards (see details below)<br/>
-Requirment dependent on use of --output_prefix parameter (see Noteworthy Arguments below)
-  4. **--output_prefix**: desired output file prefix 
+  3. **--input_type**: specify transmission summary input format as either: per_chr, multi_chr, or chr_shards (see details below)
+  4. **--output_prefix**: desired output file prefix
+  + Requirement of --output_prefix dependent on use of --comb_and_clean parameter (see Noteworthy Arguments below) <br>
 
 #### Noteworthy Arguments:
   1. **--comb_and_clean**: specify outfile format as either: merge_all_chr (Default), merge_by_chr, no_comb_clean
