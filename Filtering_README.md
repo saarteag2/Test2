@@ -52,15 +52,15 @@ Filtering can be conducted for the two types of transmission summary files: flat
 
 Both scripts accept transmission summary files in three formats that have been categorized into two categories: per_chr and multi_chr (see below for details). 
 
-![Transmission Summary Input formats and input_type](https://i.imgur.com/Xndwp9u.png)
+![Transmission Summary Input formats and input_type](https://i.imgur.com/sb93ook.png)
 
 Input in multi_chr format are preprocessed by the script and divided into per chromosome shards in a directory called "filtered_flat_per_chr_shards" within the user specified output directory (see below). By default, filtering of these per chromosome shards are submitted as qsub jobs. One can opt out of using qsub, by providing --no_qsub True as an argument.
 
-![Preprocessing Step](https://i.imgur.com/k7YDWhy.png)
+![Preprocessing Step](https://i.imgur.com/0tyE9jG.png)
 
 Both scripts also allow the user to specify in which format they would like their filtering output in by using the --comb_and_clean argument to select: merge_all_chr (Default), merge_by_chr, or no_comb_clean (see details below). If the --comb_and_clean is specified as anything but no_comb_clean, then the --output_prefix argument must be set as well (see Required Arguments above).
 
-![Combine and Clean Options](https://i.imgur.com/BrzX9lP.png)
+![Combine and Clean Options](https://i.imgur.com/wGDJgJS.png)
 
 ## 4. Additional support scripts:
 1. get_cohort_stats/get_flat_cohort_stats.py #Function? 
